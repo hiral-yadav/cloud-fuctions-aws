@@ -1,0 +1,2 @@
+Main-Class: com.spring.cloud.lib.cloud_functions_aws.CloudFunctionsAwsApplication
+
