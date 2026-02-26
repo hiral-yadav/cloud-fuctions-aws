@@ -1,12 +1,6 @@
 name: Docker Image CI
-
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,4 +13,4 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET }}
         aws-region: us-east-1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag 827472626586.dkr.ecr.us-east-1.amazonaws.com/cloud-fn:latest
+      run: docker build . --tag 827472626586.dkr.ecr.us-east-1.amazonaws.com/cloud-fn:latest
