@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 public class SpringCloudFunction {
 
     @Bean
-    public Supplier<PaymentProcessRequest> paymentProcessRequestSupplier() {
+    public Supplier<PaymentProcessRequest> paymentProcessSupplier() {
         return () -> {
             PaymentProcessRequest request = new PaymentProcessRequest();
             request.setAmount(100.0);
